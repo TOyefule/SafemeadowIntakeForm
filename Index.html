@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
 <body class="bg-gray-100 p-6">
-    <div class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow-lg">
-        <h2 class="text-xl font-bold mb-4">Patient Intake Form</h2>
+    <div class="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+        <h2 class="text-xl font-bold mb-4">Safe Meadow Health Center - Patient Intake Form</h2>
         <form action="/submit" method="POST">
             <label class="block mb-2">Full Name:</label>
             <input type="text" name="full_name" class="w-full p-2 border rounded mb-4" required>
@@ -30,14 +30,69 @@
             <label class="block mb-2">Email:</label>
             <input type="email" name="email" class="w-full p-2 border rounded mb-4" required>
 
+            <label class="block mb-2">Street Address:</label>
+            <input type="text" name="address" class="w-full p-2 border rounded mb-4" required>
+
+            <label class="block mb-2">City, State, Zip:</label>
+            <input type="text" name="city_state_zip" class="w-full p-2 border rounded mb-4" required>
+
+            <label class="block mb-2">Social Security Number:</label>
+            <input type="text" name="ssn" class="w-full p-2 border rounded mb-4">
+
+            <label class="block mb-2">Marital Status:</label>
+            <select name="marital_status" class="w-full p-2 border rounded mb-4">
+                <option value="Single">Single</option>
+                <option value="Married">Married</option>
+                <option value="Divorced">Divorced</option>
+                <option value="Separated">Separated</option>
+                <option value="Widowed">Widowed</option>
+            </select>
+
+            <label class="block mb-2">Ethnicity:</label>
+            <input type="text" name="ethnicity" class="w-full p-2 border rounded mb-4">
+
+            <label class="block mb-2">Religion:</label>
+            <input type="text" name="religion" class="w-full p-2 border rounded mb-4">
+
+            <label class="block mb-2">Primary Language:</label>
+            <input type="text" name="language" class="w-full p-2 border rounded mb-4">
+
+            <label class="block mb-2">Emergency Contact Name:</label>
+            <input type="text" name="emergency_contact" class="w-full p-2 border rounded mb-4" required>
+
+            <label class="block mb-2">Emergency Contact Phone:</label>
+            <input type="tel" name="emergency_phone" class="w-full p-2 border rounded mb-4" required>
+
+            <label class="block mb-2">Primary Care Physician:</label>
+            <input type="text" name="physician" class="w-full p-2 border rounded mb-4">
+
             <label class="block mb-2">Insurance Provider:</label>
             <input type="text" name="insurance" class="w-full p-2 border rounded mb-4">
 
-            <label class="block mb-2">Primary Physician:</label>
-            <input type="text" name="physician" class="w-full p-2 border rounded mb-4">
-
             <label class="block mb-2">Reason for Visit:</label>
             <textarea name="reason" class="w-full p-2 border rounded mb-4"></textarea>
+
+            <h3 class="text-lg font-semibold mt-6 mb-4">Consent and Policy Acknowledgment</h3>
+            <div class="mb-4">
+                <input type="checkbox" name="consent_treatment" required>
+                <label>I consent to treatment and services at Safe Meadow Health Center.</label>
+            </div>
+            <div class="mb-4">
+                <input type="checkbox" name="civil_rights_ack" required>
+                <label>I acknowledge that I have been informed of my civil rights.</label>
+            </div>
+            <div class="mb-4">
+                <input type="checkbox" name="medication_consent">
+                <label>I consent to recommended medication treatment if needed.</label>
+            </div>
+            <div class="mb-4">
+                <input type="checkbox" name="attendance_policy" required>
+                <label>I acknowledge that I have read and understood the attendance policy.</label>
+            </div>
+            <div class="mb-4">
+                <input type="checkbox" name="grievance_ack" required>
+                <label>I acknowledge that I understand the grievance procedure.</label>
+            </div>
 
             <button type="submit" class="w-full bg-blue-500 text-white p-2 rounded">Submit</button>
         </form>
